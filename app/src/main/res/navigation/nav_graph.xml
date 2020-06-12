@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.augmentedimages.app.presentation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_listMarkersFragment"
+            app:destination="@id/listMarkersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_imageArFragment"
+            app:destination="@id/imageArFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listMarkersFragment"
+        android:name="com.augmentedimages.app.presentation.list.ListMarkersFragment"
+        android:label="fragment_list_markers"
+        tools:layout="@layout/fragment_list_markers" />
+    <fragment
+        android:id="@+id/imageArFragment"
+        android:name="com.augmentedimages.app.presentation.ar_scene.ImageArFragment"
+        android:label="ImageArFragment" />
+</navigation>
